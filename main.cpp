@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <netinet/in.h>
 
-uint32_t func(char *filename){
+uint32_t convert(char *filename){
 	FILE *fd = fopen(filename, "rb");
 	uint8_t buffer[4];
 	fread(buffer, 1, 4, fd);
@@ -13,8 +13,8 @@ uint32_t func(char *filename){
 
 int main(int argc, char* argv[]){
 	uint32_t a, b;
-	a = func(argv[1]);
-	b = func(argv[2]);
+	a = convert(argv[1]);
+	b = convert(argv[2]);
 	printf("%d(0x%x) + %d(0x%x) = %d(0x%x)",a,a,b,b,a+b,a+b);
 	return 0;
 }
