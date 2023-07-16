@@ -15,6 +15,6 @@ int main(int argc, char* argv[]){
 	uint32_t a, b;
 	a = convert(argv[1]);
 	b = convert(argv[2]);
-	printf("%d(0x%x) + %d(0x%x) = %d(0x%x)",a,a,b,b,a+b,a+b);
+	printf("%u(0x%x) + %u(0x%x) = %u(0x%x)",a,a,b,b,a+b,a+b);
 	return 0;
 }
